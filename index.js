@@ -18,7 +18,8 @@ module.exports = (options) => {
   require('./config/passport')(passport);
 
   app.use(cookieParser());
-  app.use(bodyParser());
+  app.use(bodyParser.json());
+  app.use(bodyParser.urlencoded());
 
   app.set('view engine', 'ejs');
 
