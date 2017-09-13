@@ -19,7 +19,7 @@ module.exports = (options) => {
 
   app.use(cookieParser());
   app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded());
+  app.use(bodyParser.urlencoded({ extended: true }));
 
   app.set('view engine', 'ejs');
 
