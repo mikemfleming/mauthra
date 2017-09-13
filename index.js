@@ -23,7 +23,7 @@ module.exports = (options) => {
 
   app.set('view engine', 'ejs');
 
-  app.use(session({ secret: 'olafishtaroctavia', resave: false })); // make this env
+  app.use(session({ secret: 'olafishtaroctavia', resave: true, saveUninitialized: true })); // make this env
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(flash());
