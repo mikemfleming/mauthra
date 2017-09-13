@@ -12,7 +12,7 @@ module.exports = (options) => {
   // const passport = options.passport;
   const db = options.db;
 
-  mongoose.connect(db);
+  mongoose.createConnection(db, { useMongoClient: true });
 
   // configure passport before anything else
   require('./config/passport')(passport);
